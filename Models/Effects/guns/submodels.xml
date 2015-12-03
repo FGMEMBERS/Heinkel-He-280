@@ -3,30 +3,30 @@
 <PropertyList>
 
   <cannon>
-    <model>Models/Geometry/tracer.xml</model>
-    <speed>2755.9</speed>
+    <model>Aircraft/Heinkel-He-280/Models/Effects/guns/tracer.xml</model>
+    <speed>3363.0</speed>
     <cd>0.193</cd>
-    <weight>0.286600941</weight>
-    <eda>0.00338158219</eda>
-    <!--<pitch-offset>0</pitch-offset>-->
+    <weight>0.9369635</weight>
+    <eda>0.007609</eda>
     <fuse-range>0</fuse-range>
-    <life>40</life>
+    <life>30</life>
     <trigger>controls/armament/trigger</trigger>
     <expiry>true</expiry>
     <repeat>true</repeat>
-    <delay>0.41</delay>
-    <count>33</count>
+    <delay>0.03</delay>
+    <count>400</count>
     <wind>false</wind>
     <collision>true</collision>
     <impact>true</impact>
     <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
     <submodel-path>Aircraft/Heinkel-He-280/Models/Effects/guns/bullet-submodel.xml</submodel-path>
     <impact-reports>sim/ai/aircraft/collision/cannon</impact-reports>
-    <pitch-offset>0.1</pitch-offset>
+    <yaw-offset>0</yaw-offset>
+    <pitch-offset>0</pitch-offset>
   </cannon>
 
   <submodel>
-    <name>Left guns</name>
+    <name>Left</name>
     <model alias="../../cannon/model"/>
     <trigger alias="../../cannon/trigger"/>
     <speed alias="../../cannon/speed"/>
@@ -43,34 +43,15 @@
     <collision alias="../../cannon/collision"/>
     <impact alias="../../cannon/impact"/>
     <submodel-path alias="../../cannon/submodel-path"/>
+    <yaw-offset  alias="../../cannon/yaw-offset"/>
+    <pitch-offset alias="../../cannon/pitch-offset"/>
     <x-offset> 15.73892400 </x-offset> <!-- -4.79699 m = 15.73892400 ft -->
     <y-offset>  0.45822446 </y-offset> <!-- -0.13966 m =  0.45822446 ft -->
     <z-offset>  0.16877464 </z-offset> <!--  0.05144 m =  0.16877464 ft -->
-    <yaw-offset>0</yaw-offset>
-    <pitch-offset alias="../../cannon/pitch-offset"/>
   </submodel>
 
   <submodel>
-    <name>Left smoke</name>
-    <model>Aircraft/Heinkel-He-280/Models/Effects/guns/smoke.xml</model>
-    <trigger alias="../../cannon/trigger"/>
-    <speed>200</speed>
-    <repeat>true</repeat>
-    <delay>0.08</delay>
-    <count>160</count>
-    <x-offset> 15.73892400 </x-offset> <!-- -4.79699 m = 15.73892400 ft -->
-    <y-offset>  0.45822446 </y-offset> <!-- -0.13966 m =  0.45822446 ft -->
-    <z-offset>  0.16877464 </z-offset> <!--  0.05144 m =  0.16877464 ft -->
-    <yaw-offset>-60</yaw-offset>
-    <pitch-offset>-60</pitch-offset>
-    <eda>10</eda>
-    <wind>true</wind>
-    <buoyancy>33</buoyancy>
-    <life>5</life>
-  </submodel>
-
-  <submodel>
-    <name>Center guns</name>
+    <name>Center</name>
     <model alias="../../cannon/model"/>
     <trigger alias="../../cannon/trigger"/>
     <speed alias="../../cannon/speed"/>
@@ -87,34 +68,15 @@
     <collision alias="../../cannon/collision"/>
     <impact alias="../../cannon/impact"/>
     <submodel-path alias="../../cannon/submodel-path"/>
-    <x-offset> 15.32906200 </x-offset> <!-- -4.67207 m = 15.32906200 ft -->
-    <y-offset>  0.00000000 </y-offset> <!--  0.00000 m =  0.00000000 ft -->
-    <z-offset>  0.49648092 </z-offset> <!--  0.15132 m =  0.49648092 ft -->
-    <yaw-offset>0</yaw-offset>
+    <yaw-offset  alias="../../cannon/yaw-offset"/>
     <pitch-offset alias="../../cannon/pitch-offset"/>
-  </submodel>
-
-  <submodel>
-    <name>Center smoke</name>
-    <model>Aircraft/Heinkel-He-280/Models/Effects/guns/smoke.xml</model>
-    <trigger alias="../../cannon/trigger"/>
-    <speed>200</speed>
-    <repeat>true</repeat>
-    <delay>0.08</delay>
-    <count>160</count>
     <x-offset> 15.32906200 </x-offset> <!-- -4.67207 m = 15.32906200 ft -->
     <y-offset>  0.00000000 </y-offset> <!--  0.00000 m =  0.00000000 ft -->
     <z-offset>  0.49648092 </z-offset> <!--  0.15132 m =  0.49648092 ft -->
-    <yaw-offset>-60</yaw-offset>
-    <pitch-offset>-60</pitch-offset>
-    <eda>10</eda>
-    <wind>true</wind>
-    <buoyancy>33</buoyancy>
-    <life>5</life>
   </submodel>
-
+  
   <submodel>
-    <name>Right guns</name>
+    <name>Right</name>
     <model alias="../../cannon/model"/>
     <trigger alias="../../cannon/trigger"/>
     <speed alias="../../cannon/speed"/>
@@ -131,31 +93,11 @@
     <collision alias="../../cannon/collision"/>
     <impact alias="../../cannon/impact"/>
     <submodel-path alias="../../cannon/submodel-path"/>
-    <x-offset> 15.73892400 </x-offset> <!-- -4.79699 m = 15.73892400 ft -->
-    <y-offset> -0.45822446 </y-offset> <!--  0.13966 m = -0.45822446 ft -->
-    <z-offset>  0.16877464 </z-offset> <!--  0.05144 m =  0.16877464 ft -->
-    <yaw-offset>0</yaw-offset>
+    <yaw-offset  alias="../../cannon/yaw-offset"/>
     <pitch-offset alias="../../cannon/pitch-offset"/>
-  </submodel>
-
-  <submodel>
-    <name>Right smoke</name>
-    <model>Aircraft/Heinkel-He-280/Models/Effects/guns/smoke.xml</model>
-    <trigger alias="../../cannon/trigger"/>
-    <speed>200</speed>
-    <repeat>true</repeat>
-    <delay>0.08</delay>
-    <count>160</count>
     <x-offset> 15.73892400 </x-offset> <!-- -4.79699 m = 15.73892400 ft -->
     <y-offset> -0.45822446 </y-offset> <!--  0.13966 m = -0.45822446 ft -->
     <z-offset>  0.16877464 </z-offset> <!--  0.05144 m =  0.16877464 ft -->
-    <yaw-offset>-60</yaw-offset>
-    <pitch-offset>-60</pitch-offset>
-    <eda>10</eda>
-    <wind>true</wind>
-    <buoyancy>33</buoyancy>
-    <life>5</life>
   </submodel>
-
+  
 </PropertyList>
-
