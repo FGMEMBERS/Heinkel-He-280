@@ -6,11 +6,7 @@
 
   <animation>
     <!-- Objets opaques -->
-    <object-name>panel1</object-name>
-    <object-name>panel2</object-name>
-    <object-name>panel3</object-name>
-    <object-name>panel4</object-name>
-    <object-name>panel5</object-name>
+    <object-name>panel</object-name>
 
     <!-- Objets transparents -->
   </animation>
@@ -43,6 +39,87 @@
   </model>
 
   <model>
+    <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/clock/clock.xml</path>
+    <offsets>
+      <x-m> 0.031 </x-m>
+      <y-m> 0.170 </y-m>
+      <z-m> 0.170 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/compass/compass.xml</path>
+    <offsets>
+      <x-m>  0.032 </x-m>
+      <y-m> -0.080 </y-m>
+      <z-m>  0.060 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/egt/egtL.xml</path>
+    <offsets>
+      <x-m> 0.033 </x-m>
+      <y-m> 0.169 </y-m>
+      <z-m> 0.040 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/egt/egtR.xml</path>
+    <offsets>
+      <x-m> 0.033 </x-m>
+      <y-m> 0.229 </y-m>
+      <z-m> 0.040 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/fuel/fuelL.xml</path>
+    <offsets>
+      <x-m>  0.032 </x-m>
+      <y-m> -0.150 </y-m>
+      <z-m>  0.110 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/fuel/fuelR.xml</path>
+    <offsets>
+      <x-m>  0.032 </x-m>
+      <y-m> -0.150 </y-m>
+      <z-m>  0.050 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/pression/pressionL.xml</path>
+    <offsets>
+      <x-m>  0.032 </x-m>
+      <y-m> -0.200 </y-m>
+      <z-m>  0.110 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/pression/pressionR.xml</path>
+    <offsets>
+      <x-m>  0.032 </x-m>
+      <y-m> -0.200 </y-m>
+      <z-m>  0.050 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/revi16b/revi-ger.xml</path>
+    <offsets>
+      <x-m> 0.00 </x-m>
+      <y-m> 0.00 </y-m>
+      <z-m> 0.28 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
     <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/throttle/throttle1.xml</path>
     <offsets>
       <x-m> 0.032 </x-m>
@@ -61,94 +138,12 @@
   </model>
 
   <model>
-    <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/egt/egtL.xml</path>
-    <offsets>
-      <x-m> 0.033 </x-m>
-      <y-m> 0.169 </y-m>
-      <z-m> 0.040 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/egt/egtR.xml</path>
-    <offsets>
-      <x-m> 0.033 </x-m>
-      <y-m> 0.229 </y-m>
-      <z-m> 0.040 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/fuel/fuelL.xml</path>
-    <offsets>
-      <x-m>  0.033 </x-m>
-      <y-m> -0.150 </y-m>
-      <z-m>  0.110 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/fuel/fuelR.xml</path>
-    <offsets>
-      <x-m>  0.033 </x-m>
-      <y-m> -0.150 </y-m>
-      <z-m>  0.050 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/pression/pressionL.xml</path>
-    <offsets>
-      <x-m>  0.033 </x-m>
-      <y-m> -0.200 </y-m>
-      <z-m>  0.110 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/pression/pressionR.xml</path>
-    <offsets>
-      <x-m>  0.033 </x-m>
-      <y-m> -0.200 </y-m>
-      <z-m>  0.050 </z-m>
-    </offsets>
-  </model>
-
-  <model>
     <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/vsi/vsi.xml</path>
     <offsets>
-      <x-m>  0.032 </x-m>
-      <y-m>  0.080 </y-m>
-      <z-m>  0.060 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/compass/compass.xml</path>
-    <offsets>
-      <x-m>  0.032 </x-m>
-      <y-m> -0.080 </y-m>
-      <z-m>  0.060 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/clock/clock.xml</path>
-    <offsets>
       <x-m> 0.032 </x-m>
-      <y-m> 0.170 </y-m>
-      <z-m> 0.170 </z-m>
+      <y-m> 0.080 </y-m>
+      <z-m> 0.060 </z-m>
     </offsets>
   </model>
 
-<!--
-  <model>
-    <path>Aircraft/Heinkel-He-280/Models/Interior/Panels/Instruments/revi16b/revi-ger.xml</path>
-    <offsets>
-      <x-m> -0.511 </x-m>
-      <y-m>  0.060  </y-m>
-      <z-m>  0.429 </z-m>
-    </offsets>
-  </model>
--->
 </PropertyList>

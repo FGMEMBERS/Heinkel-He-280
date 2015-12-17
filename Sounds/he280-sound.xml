@@ -443,7 +443,7 @@
     <gun>
       <name>Gun up left</name>
       <mode>looped</mode>
-      <path>Aircraft/ME-262/Sounds/gunfire_1.wav</path>
+      <path>Aircraft/Heinkel-He-280/Sounds/gunfire_1.wav</path>
       <condition>
         <and>
           <property>controls/armament/trigger</property>
@@ -462,7 +462,7 @@
     <gun>
       <name>Gun up right</name>
       <mode>looped</mode>
-      <path>Aircraft/ME-262/Sounds/gunfire_1.wav</path>
+      <path>Aircraft/Heinkel-He-280/Sounds/gunfire_1.wav</path>
       <condition>
         <and>
           <property>controls/armament/trigger</property>
@@ -481,7 +481,7 @@
     <gun>
       <name>Gun down left</name>
       <mode>looped</mode>
-      <path>Aircraft/ME-262/Sounds/gunfire_1.wav</path>
+      <path>Aircraft/Heinkel-He-280/Sounds/gunfire_1.wav</path>
       <condition>
         <and>
           <property>controls/armament/trigger</property>
@@ -500,7 +500,7 @@
     <gun>
       <name>Gun down left</name>
       <mode>looped</mode>
-      <path>Aircraft/ME-262/Sounds/gunfire_1.wav</path>
+      <path>Aircraft/Heinkel-He-280/Sounds/gunfire_1.wav</path>
       <condition>
         <and>
           <property>controls/armament/trigger</property>

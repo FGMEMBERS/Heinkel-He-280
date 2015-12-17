@@ -1,6 +1,6 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "transparent" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 81 trans 0.85
+MATERIAL "transparent" rgb 1 1 1 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 64 trans 0.85
 OBJECT world
 kids 7
 OBJECT poly
@@ -8,9 +8,9 @@ name "cache"
 loc -0.71344 0.276574 -0
 data 5
 cache
-texture "colors.png"
+texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 32
 -0.474497 -0.164848 0.411622
 -0.474497 -0.164848 -0.411622
@@ -217,9 +217,9 @@ name "intcanopy"
 loc 0 0 -0
 data 9
 intcanopy
-texture "colors.png"
+texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 164
 -1.816702 0.765209 -0
 -1.816702 0.751654 0.09376
@@ -1260,9 +1260,9 @@ name "interior"
 loc 0 0 -0
 data 8
 interior
-texture "colors.png"
+texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 208
 -0.692026 0.15714 0.468287
 -0.550884 0.15714 0.468287
@@ -2741,9 +2741,9 @@ name "inttour"
 loc 0 0 -0
 data 7
 inttour
-texture "colors.png"
+texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 190
 -1.862375 0.551866 0.337531
 -1.862375 0.420872 0.409349
@@ -3600,7 +3600,7 @@ name "intverriere"
 loc 0 0 -0
 data 11
 intverriere
-crease 30.000001
+crease 180.000005
 numvert 55
 -1.782086 0.76902 -0
 -1.782086 0.755428 0.09376
@@ -3874,7 +3874,7 @@ name "intvitres"
 loc 0 0 -0
 data 9
 intvitres
-crease 30.000001
+crease 180.000005
 numvert 90
 -2.101979 0.664595 0.094743
 -2.145172 0.637041 0.103004
@@ -4457,9 +4457,9 @@ name "planchet"
 loc 0 0 -0
 data 8
 planchet
-texture "colors.png"
+texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 15
 -2.363774 -0.371759 0.468287
 -2.363774 -0.371759 -0

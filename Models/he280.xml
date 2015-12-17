@@ -13,9 +13,9 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-    
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -59,6 +59,7 @@
 
     <object-name>trous</object-name>
     <object-name>guns</object-name>
+    <object-name>cables</object-name>
     <object-name>axeA</object-name>
     <object-name>axeB</object-name>
     <object-name>roueA</object-name>
@@ -106,6 +107,7 @@
 
     <object-name>trous</object-name>
     <object-name>guns</object-name>
+    <object-name>cables</object-name>
     <object-name>axeA</object-name>
     <object-name>axeB</object-name>
     <object-name>roueA</object-name>
@@ -124,12 +126,6 @@
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
   </animation>
 
   <effect>
@@ -163,20 +159,19 @@
     <object-name>heliceD2</object-name>
   </effect>
 
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Heinkel-He-280/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitres</object-name>
     <object-name>verriere</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>vitres</object-name>
     <object-name>verriere</object-name>
-  </animation>
-
+  </effect>
+  
   <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/Heinkel-He-280/Models/shadow.xml</path>
@@ -257,7 +252,7 @@
   <!-- Les flammes -->
   <!-- Gauche -->
   <model>
-    <path>Aircraft/Heinkel-He-280/Models/Effects/flammes/flammesG.xml</path>
+    <path>Aircraft/Heinkel-He-280/Models/Effects/flammes/combustionG.xml</path>
     <offsets>
       <x-m>  0.55358 </x-m>
       <y-m> -1.81945 </y-m>
@@ -286,7 +281,7 @@
   <!-- Les flammes -->
   <!-- Droite -->
   <model>
-    <path>Aircraft/Heinkel-He-280/Models/Effects/flammes/flammesD.xml</path>
+    <path>Aircraft/Heinkel-He-280/Models/Effects/flammes/combustionD.xml</path>
     <offsets>
       <x-m>  0.55358 </x-m>
       <y-m>  1.81945 </y-m>
@@ -961,61 +956,6 @@
     </axis>
   </animation>
 
-  <!-- Ajout des effets lumineux
-  <model>
-    <path>Aircraft/Heinkel-He-280/Models/lights/beacon.xml</path>
-    <offsets>
-      <x-m> 5.312 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> 2.099 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Heinkel-He-280/Models/lights/beacon.xml</path>
-    <offsets>
-      <x-m> -2.789 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -0.509 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Heinkel-He-280/Models/lights/RedLight.xml</path>
-    <offsets>
-      <x-m> -0.575 </x-m>
-      <y-m> -5.273 </y-m>
-      <z-m>  0.117 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Heinkel-He-280/Models/lights/GreenLight.xml</path>
-    <offsets>
-      <x-m> -0.575 </x-m>
-      <y-m>  5.273 </y-m>
-      <z-m>  0.117 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Heinkel-He-280/Models/lights/StrobeWhite.xml</path>
-    <offsets>
-      <x-m> -0.535 </x-m>
-      <y-m> -5.273 </y-m>
-      <z-m>  0.117 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Heinkel-He-280/Models/lights/StrobeWhite.xml</path>
-    <offsets>
-      <x-m> -0.535 </x-m>
-      <y-m>  5.273 </y-m>
-      <z-m>  0.117 </z-m>
-    </offsets>
-  </model> -->
-
   <!-- Canopy -->
   <animation>
     <name>AllCanopy</name>
@@ -1024,9 +964,23 @@
   </animation>
 
   <animation>
+    <type>pick</type>
+    <object-name>AllCanopy</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>translate</type>
     <object-name>AllCanopy</object-name>
-    <property>/instrumentation/doors/crew/position-norm</property>
+    <property>sim/model/door-positions/crew/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 0.00 </dep></entry>
       <entry><ind> 1 </ind><dep> 1.23 </dep></entry>
@@ -1038,5 +992,50 @@
     </axis>
   </animation>
 
-</PropertyList>
+  <!-- Ajout des effets lumineux -->
+  <model>
+    <path>Aircraft/Heinkel-He-280/Models/lights/beacon.xml</path>
+    <offsets>
+      <x-m> 1.86006 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 0.57269 </z-m>
+    </offsets>
+  </model>
 
+  <model>
+    <path>Aircraft/Heinkel-He-280/Models/lights/RedLight.xml</path>
+    <offsets>
+      <x-m> -1.27416 </x-m>
+      <y-m> -6.05743 </y-m>
+      <z-m>  0.22477 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Heinkel-He-280/Models/lights/StrobeLight.xml</path>
+    <offsets>
+      <x-m> -1.28416 </x-m>
+      <y-m> -6.05743 </y-m>
+      <z-m>  0.22477 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Heinkel-He-280/Models/lights/GreenLight.xml</path>
+    <offsets>
+      <x-m> -1.27416 </x-m>
+      <y-m>  6.05743 </y-m>
+      <z-m>  0.22477 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Heinkel-He-280/Models/lights/StrobeLight.xml</path>
+    <offsets>
+      <x-m> -1.28416 </x-m>
+      <y-m>  6.05743 </y-m>
+      <z-m>  0.22477 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

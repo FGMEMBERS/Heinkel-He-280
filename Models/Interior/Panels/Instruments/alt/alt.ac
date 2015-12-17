@@ -1,6 +1,6 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
-MATERIAL "transparent" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 1 1 1 shi 64 trans 0.85
+MATERIAL "transparent" rgb 1 1 1 amb 0.5 0.5 0.5 emis 0 0 0 spec 1 1 1 shi 64 trans 0.85
 OBJECT world
 kids 7
 OBJECT poly
@@ -10,7 +10,7 @@ data 4
 face
 texture "alt.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 33
 0.002591 0.020547 -0.020791
 0.002591 0.016092 -0.024447
@@ -246,7 +246,7 @@ data 4
 fond
 texture "alt.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 216
 0.001658 0.005634 0.028249
 0.001658 -0.000046 0.028804
@@ -1785,7 +1785,7 @@ data 4
 inhg
 texture "alt.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 14
 0.002779 0.02736 -0
 0.002778 0.024373 -0
@@ -1872,7 +1872,7 @@ data 8
 needlekm
 texture "alt.png"
 texrep 1.000000 1.000000
-crease 45.000001
+crease 180.000005
 numvert 38
 0.004316 -0.01563 0.000946
 0.004316 0.001773 0.000946
@@ -2116,7 +2116,7 @@ data 11
 needlemetre
 texture "alt.png"
 texrep 1.000000 1.000000
-crease 45.000001
+crease 180.000005
 numvert 38
 0.005646 -0.02425 0.001194
 0.005646 0.001773 0.001194
@@ -2360,7 +2360,7 @@ data 6
 visses
 texture "alt.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 132
 0.004528 0.027339 0.027356
 0.004386 0.027339 0.026209
@@ -3365,7 +3365,7 @@ name "vitre"
 loc 0.000068 0 -0
 data 5
 vitre
-crease 30.000001
+crease 180.000005
 numvert 34
 0.00583 -0.000148 0.000019
 0.006776 0.024279 -0.016302
