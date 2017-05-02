@@ -16,6 +16,17 @@
       <cockpit type="int"> 2 </cockpit>
       <model type="int">   4 </model>
     </rating>
+
+    <tags>
+      <tag>fighter</tag>
+      <tag>heinkel</tag>
+      <tag>1940s</tag>
+      <tag>ww2</tag>
+      <tag>prototype</tag>
+      <tag>retractable-gear</tag>
+      <tag>jet</tag>
+      <tag>twin-engine</tag>
+    </tags>
     
   </sim>
   
